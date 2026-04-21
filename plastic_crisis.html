@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>塑膠填滿海洋 | 海洋危機專題</title>
+    <style>
+        :root {
+            --warning-red: #d90429;
+            --ocean-dark: #00308f;
+            --plastic-gray: #e9ecef;
+        }
+
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #2b2d42;
+        }
+
+        /* 標題區 */
+        header {
+            background: linear-gradient(rgba(0, 48, 143, 0.85), rgba(0, 48, 143, 0.85)), 
+                        url('https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -40px auto 60px;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--ocean-dark);
+            border-bottom: 2px solid var(--plastic-gray);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        /* 震撼數據框 */
+        .data-alert {
+            display: flex;
+            align-items: center;
+            background: #fff1f0;
+            border: 2px solid #ffa39e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .data-icon {
+            font-size: 3rem;
+            margin-right: 20px;
+        }
+
+        .data-text b {
+            color: var(--warning-red);
+            font-size: 1.4rem;
+        }
+
+        /* 垃圾分解時間表 */
+        .timeline {
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--plastic-gray);
+            border-radius
+}
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ced4da;
+        }
+
+        .timeline-item:last-child { border: none; }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: var(--ocean-dark);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .back-home:hover { opacity: 0.9; transform: translateX(-5px); }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>塑膠填滿海洋：無盡的噩夢</h1>
+    <p>這不是危言聳聽，而是正在發生的生態浩劫</p>
+</header>
+
+<div class="container">
+    <div class="data-alert">
+        <div class="data-icon">🚛</div>
+        <div class="data-text">
+            根據統計，<b>每分鐘都有約一輛垃圾車</b> 的塑膠廢棄物被倒入海洋。這導致全球海域目前累積了超過 1.5 億公噸的塑膠。
+        </div>
+    </div>
+
+    <h2>塑膠是如何「填滿」海洋的？</h2>
+    <p>塑膠之所以可怕，在於其驚人的「長壽」。在自然環境中，塑膠幾乎無法完全被細菌分解，只能不斷碎裂成更小的微粒。以下是常見海洋廢棄物的「壽命」：</p>
+    
+    <div class="timeline">
+        <div class="timeline-item"><span>塑膠袋</span> <strong>20 年</strong></div>
+        <div class="timeline-item"><span>吸管 / 塑膠杯</span> <strong>200 年</strong></div>
+        <div class="timeline-item"><span>寶特瓶</span> <strong>450 年</strong></div>
+        <div class="timeline-item"><span>釣魚線</span> <strong>600 年</strong></div>
+    </div>
+
+    <h2>全球垃圾帶 (Great Garbage Patches)</h2>
+    <img src="https://greensense.org.hk/wp-content/uploads/2019/05/rubbish-island_1.jpg"height='350'width='665' " class="responsive-img">
+
+    <p>由於洋流的運動，海洋中形成了數個巨大的「垃圾漩渦」。其中最著名的「太平洋垃圾帶」面積高達 <strong>160 萬平方公里</strong>，這相當於 <strong>44 個台灣</strong> 的大小。這些區域的塑膠濃度極高，形成了一片由碎片組成的「塑膠湯」。</p>
+
+    <h2>對人類與環境的長期影響</h2>
+    <ul>
+        <li><strong>棲息地破壞：</strong> 沉入海底的塑膠會覆蓋海草床與珊瑚礁，導致底棲生物窒息。</li>
+        <li><strong>入侵物種：</strong> 漂浮的塑膠成為了海洋生物的「順風車」，讓外來種擴散到非原生海域，破壞生態平衡。</li>
+        <li><strong>化學汙染：</strong> 塑膠在降解過程中會釋放雙酚A (BPA) 等環境荷爾蒙，影響海洋生物的繁殖功能。</li>
+    </ul>
+
+    <a href="index.html" class="back-home">← 返回海洋小教室</a>
+</div>
+
+<footer style="text-align: center; padding-bottom: 40px; color: #6c757d;">
+    <p>© 2026 海洋小教室 | 科普專題：海洋塑膠汙染</p>
+</footer>
+
+</body>
+</html>

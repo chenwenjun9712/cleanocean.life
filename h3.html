@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隱形的毒藥 | 塑膠化學危害</title>
+    <style>
+        :root {
+            --toxic-green: #2ecc71;
+            --deep-purple: #4b0082;
+            --science-gray: #f8f9fa;
+        }
+
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            background-color: #fdfdfd;
+            color: #2c3e50;
+        }
+
+        /* 頂部視覺 */
+        header {
+            background: linear-gradient(135deg, var(--deep-purple), #6a0dad);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--deep-purple);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* 科普小教室方塊 */
+        .toxic-box {
+            background: #f4f0ff;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            position: relative;
+        }
+
+        .toxic-box::before {
+            content: "🧪";
+            font-size: 2rem;
+            position: absolute;
+            top: -20px;
+            right: 20px;
+        }
+
+        /* 化學循環圖示 */
+        .process-flow {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .process-step {
+            flex: 1;
+            min-width: 150px;
+            padding: 20px;
+            background: var(--science-gray);
+            border-radius: 10px;
+            border-top: 5px solid var(--toxic-green);
+        }
+
+        .process-step span {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: var(--deep-purple);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover { background: #310055; box-shadow: 0 5px 15px rgba(75,0,130,0.3); }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>微塑膠：海洋中的化學海綿</h1>
+    <p>除了物理性的傷害，塑膠在微觀世界裡正釋放毒素</p>
+</header>
+
+<div class="container">
+    <p>當我們談論海洋塑膠時，看得見的垃圾只是冰山一角。更危險的是那些看不見的化學毒害。塑膠在海水中並非靜止不動，它像是一塊**「化學海綿」**，不斷地與周圍環境交換物質。</p>
+
+    <div class="toxic-box">
+        <h3>為什麼塑膠會有毒？</h3>
+        <p>塑膠製品在製造過程中會添加多種化學成分（如塑化劑、阻燃劑、安定劑）。此外，當塑膠碎裂成微粒進入海洋後，其多孔隙的表面會吸附海水中的**持久性有機污染物 (POPs)** 和**重金屬**。</p>
+    </div>
+
+    <h2>毒素是如何進入食物鏈的？</h2>
+<img src="https://wuo-wuo.com/images/zeczec/%E3%80%8A%E6%B5%B7%E6%B4%8B%E5%9E%83%E5%9C%BE%E3%80%8B%E6%94%BE%E9%96%8B%E9%82%A3%E5%8B%95%E7%89%A9-%E5%9E%83%E5%9C%BE%E7%84%A1%E7%9B%A1%E7%9A%84%E9%A8%B7%E6%93%BE-01-01.png"height='500'width='665' alt="海洋食物鏈示意圖" class="responsive-img">
+    <div class="process-flow">
+        <div class="process-step">
+
+            <span>🧽</span>
+            <strong>吸附</strong>
+            <p>微塑膠吸附海中廢水排放的毒素。</p>
+        </div>
+        <div class="process-step">
+            <span>🐟</span>
+            <strong>攝食</strong>
+            <p>浮游生物或小魚將微粒當成食物吃下。</p>
+        </div>
+        <div class="process-step">
+            <span>⬆️</span>
+            <strong>累積</strong>
+            <p>透過大魚吃小魚，毒素在生物體內濃度翻倍。</p>
+        </div>
+        <div class="process-step">
+            <span>🍽️</span>
+            <strong>餐桌</strong>
+            <p>人類食用位於高層食物鏈的海鮮。</p>
+        </div>
+    </div>
+
+    <h2>常見的化學殺手</h2>
+    <ul>
+        <li><strong>雙酚A (BPA)：</strong> 一種環境荷爾蒙，會干擾生物的生殖系統與發育。</li>
+        <li><strong>鄰苯二甲酸酯：</strong> 俗稱塑化劑，可能導致海洋生物的賀爾蒙失調。</li>
+        <li><strong>多氯聯苯 (PCBs)：</strong> 雖然已禁用，但仍大量存在於海床，會經由微塑膠被帶回循環。</li>
+    </ul>
+
+    <div style="background: #e9f7ef; border-left: 5px solid var(--toxic-green); padding: 20px; margin-top: 30px;">
+        <strong>科學提醒：</strong> 微塑膠不僅存在於海鮮中，研究顯示在海鹽、甚至是瓶裝水中都能發現其蹤跡。這不再只是「環境問題」，更是「健康問題」。
+    </div>
+
+    <a href="index.html" class="back-home">← 返回海洋小教室</a>
+</div>
+
+<footer style="text-align: center; color: #999; padding: 40px 0;">
+    <p>© 2026 海洋小教室 - 守護健康的藍色家園</p>
+</footer>
+
+</body>
+</html>

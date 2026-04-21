@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生物的哀歌 | 海洋誤食危機</title>
+    <style>
+        :root {
+            --danger-orange: #e67e22;
+            --ocean-depth: #1a2a6c;
+            --bg-light: #f4f7f6;
+        }
+
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: #2c3e50;
+        }
+
+        /* 頂部視覺 */
+        .header-banner {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: -50px auto 50px;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        h2 { color: var(--ocean-depth); border-left: 5px solid var(--danger-orange); padding-left: 15px; margin-top: 40px; }
+
+        /* 案例卡片 */
+        .case-study {
+            display: flex;
+            gap: 20px;
+            background: #fff9f4;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            align-items: center;
+        }
+        .case-study img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; }
+
+        .warning-box {
+            background-color: #ffe5d9;
+            border: 1px solid var(--danger-orange);
+            color: #d35400;
+            padding: 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 25px;
+            background: var(--ocean-depth);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .back-btn:hover { background: #000; }
+
+        @media (max-width: 600px) {
+            .case-study { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-banner">
+    <h1>當晚餐變成了塑膠</h1>
+    <p>全世界有超過 700 種海洋生物正受塑膠垃圾威脅</p>
+</div>
+
+<div class="container">
+    <p>在廣闊的海洋中，許多生物無法分辨「食物」與「垃圾」。對於牠們來說，漂浮在水中的塑膠袋看起來像極了美味的水母，而彩色的塑膠碎片則像是誘人的魚卵。</p>
+
+    <div class="warning-box">
+        ⚠️ 研究顯示：高達 90% 的海鳥胃裡都含有塑膠殘骸。
+    </div>
+
+    <h2>致命的誤認</h2>
+    
+    <div class="case-study">
+        <img src="https://images.unsplash.com/photo-1518467166778-b88f373ffec7?w=200" alt="海龜">
+        <div>
+            <strong>海龜 vs 塑膠袋</strong>
+            <p>海龜的主食是水母。透明的塑膠袋在海水中漂浮的律動感與水母極其相似，一旦誤食，塑膠袋會阻塞腸道，導致海龜因無法進食而緩慢餓死。</p>
+        </div>
+    </div>
+
+    <div class="case-study" style="background: #f0f7ff;">
+        <img src="https://images.unsplash.com/photo-1511131341194-24e2eeeebb09?w=200" alt="信天翁">
+        <div>
+            <strong>信天翁 vs 塑膠瓶蓋</strong>
+            <p>信天翁常在海面銜取亮色物體餵養幼鳥。許多雛鳥的胃部塞滿了打火機和瓶蓋，這些無法消化的異物讓牠們即便胃部飽足卻極度營養不良。</p>
+        </div>
+    </div>
+    <img src="https://www.greenpeace.org/static/planet4-taiwan-stateless/2019/03/f79ed95b-gp0stqroy_pressmedia-e1622530890500.jpg"height='400'width='665'" class="responsive-img">
+    <div class="process-flow">
+
+    <h2>「假性飽足感」的陷阱</h2>
+    <p>當生物吞下大量塑膠後，大腦會接收到「胃已經滿了」的錯誤訊號。這會引發以下後果：</p>
+    <ul>
+        <li><strong>停止覓食：</strong> 生物不再尋找真正的食物。</li>
+        <li><strong>內出血：</strong> 尖銳的塑膠碎片可能刺破食道或胃壁。</li>
+        <li><strong>漂浮障礙：</strong> 胃部堆積的空氣和塑膠會使生物難以潛入深水躲避天敵。</li>
+    </ul>
+
+    <a href="index.html" class="back-btn">← 回到海洋小教室</a>
+</div>
+
+<footer style="text-align: center; color: #888; margin-bottom: 40px;">
+    <p>© 2026 海洋小教室 - 守護生物的未來</p>
+</footer>
+
+</body>
+</html>

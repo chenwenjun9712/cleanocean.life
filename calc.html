@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海好嗎？你有塑嘛！- 減塑計算機</title>
+    <style>
+        :root {
+            --primary-blue: #005f73;
+            --wave-blue: #0a9396;
+            --accent-sand: #ee9b00;
+            --soft-white: #f8f9fa;
+        }
+
+        body {
+            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #7dd3fc 100%);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            width: 90%;
+            max-width: 450px;
+            padding: 2rem;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-top: 10px solid var(--primary-blue);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header span { font-size: 2.5rem; }
+
+        h1 {
+            color: var(--primary-blue);
+            margin: 0.5rem 0;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .input-section {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f1f3f5;
+            padding: 12px 18px;
+            border-radius: 15px;
+        }
+
+        label {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        input {
+            width: 60px;
+            padding: 8px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: var(--wave-blue);
+            background: #fff;
+        }
+
+        button {
+            background: var(--wave-blue);
+            color: white;
+            border: none;
+            padding: 1.1rem;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        #result-area {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            display: none;
+            animation: fadeIn 0.5s ease;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            background: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="header">
+        <span>🌊</span>
+        <h1>海好嗎？你有塑嘛！</h1>
+        <p class="description">年度塑膠足跡測算</p>
+    </div>
+
+    <div class="input-section">
+        <div class="input-group">
+            <label>🥤 塑膠吸管</label>
+            <input type="number" id="straws" value="0" min="0">
+        </div>
+        <div class="input-group">
+            <label>🛍️ 塑膠袋</label>
+            <input type="number" id="bags" value="0" min="0">
+        </div>
+        <div class="input-group">
+            <label>🍼 寶特瓶</label>
+            <input type="number" id="bottles" value="0" min="0">
+        </div>
+        <div class="input-group">
+            <label>🥡 外帶餐盒</label>
+            <input type="number" id="containers" value="0" min="0">
+        </div>
+
+        <button onclick="calculate()">立即看我的影響力</button>
+       <a href="index.html" target="_self" class="back-home" style="
+          display: inline-flex;    /* 改用 flex 佈局 */
+    	  align-items: center;     /* 垂直置中 */
+    	  justify-content: center; /* 水平置中 */
+    	  padding: 10px 20px;
+    	  background-color: #0077be;
+    	  color: white;
+    	  text-decoration: none;
+    	  border-radius: 50px;
+    	  font-weight: bold;
+    	  min-width: 150px;        /* 設定最小寬度，置中效果會更明顯 */
+	">← 返回海洋小教室</a>
+
+    </div>
+
+    <div id="result-area">
+        <b id="res-text" style="font-size: 1.2rem; display: block; margin-bottom: 5px;"></b>
+        <div id="res-detail"></div>
+        <div id="badge" class="badge"></div>
+    </div>
+</div>
+
+<script>
+    function calculate() {
+        const s = parseInt(document.getElementById('straws').value) || 0;
+        const b = parseInt(document.getElementById('bags').value) || 0;
+        const bt = parseInt(document.getElementById('bottles').value) || 0;
+        const c = parseInt(document.getElementById('containers').value) || 0;
+
+        const yearly = (s + b + bt + c) * 52;
+        const resArea = document.getElementById('result-area');
+        
+        resArea.style.display = 'block';
+        
+        if (yearly === 0) {
+            resArea.style.backgroundColor = '#d8f3dc';
+            document.getElementById('res-text').innerText = "海很好！因為你沒塑！";
+            document.getElementById('res-detail').innerText = "你是真正的海洋英雄，大海感謝你的守護。";
+            document.getElementById('badge').innerText = "🏆 完美無塑神人";
+            document.getElementById('badge').style.color = "#2d6a4f";
+        } else if (yearly < 500) {
+            resArea.style.backgroundColor = '#caf0f8';
+            document.getElementById('res-text').innerText = `年度累積：${yearly} 件塑膠`;
+            document.getElementById('res-detail').innerText = "表現不錯，但還是有點「塑」喔！再加油！";
+            document.getElementById('badge').innerText = "🌱 減塑實踐者";
+            document.getElementById('badge').style.color = "#0077b6";
+        } else {
+            resArea.style.backgroundColor = '#fee440';
+            document.getElementById('res-text').innerText = `你有塑！每年產出 ${yearly} 件`;
+            document.getElementById('res-detail').innerText = "這對海洋生物來說太沉重了。試著自備容器吧！";
+            document.getElementById('badge').innerText = "⚠️ 需即刻行動";
+            document.getElementById('badge').style.color = "#856404";
+        }
+    }
+</script>
+
+</body>
+</html>
